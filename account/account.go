@@ -6,6 +6,7 @@ import (
 	"log"
 
 	"github.com/doitmagic/blockchain/account/balance"
+	"github.com/doitmagic/blockchain/account/wallet"
 	"github.com/doitmagic/blockchain/block"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
@@ -50,4 +51,11 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Println(balance.ConvertWeiBalanceToEthValue(pendingBalance))
+
+	//generate new Wallet
+	walletAddress, err := wallet.GenerateWalletAddress()
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("new wallet adress is %s ", walletAddress)
 }
