@@ -19,8 +19,16 @@ export NODE_OPTIONS=--openssl-legacy-provider
  !!! You must start Ganache before running example !!!
 
  ## Each dir host an example:
- ### Client connection implementation
+ ### Client connection implementation: 
 ```
 cd client
 go run client.go
+```
+ ### Account balance implementation, example for: 
+ - balance of an account 
+ - account balance at the time of that block
+ - pending account balance
+ ```
+cd account
+go run account.go
 ```
