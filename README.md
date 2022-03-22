@@ -30,5 +30,5 @@ go run client.go
  - pending account balance
  ```
 cd account
-go run account.go
+go run account.go 
 ```
