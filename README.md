@@ -28,6 +28,7 @@ go run client.go
  - balance of an account 
  - account balance at the time of that block
  - pending account balance
+ -  generate new wallet 
  ```
 cd account
 go run account.go
