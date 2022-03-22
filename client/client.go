@@ -15,7 +15,11 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println("we managed to connect")
-	networkID, _ := client.NetworkID(ctx)
+	networkID, err := client.NetworkID(ctx)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	//print networkID
 	fmt.Println(networkID)
 }
