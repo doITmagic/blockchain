@@ -1,4 +1,4 @@
-# blockchain
+# exemples for using go-ethereum 
  Ethereum Development with Golang
 
 
@@ -31,5 +31,5 @@ go run client.go
  -  generate new wallet 
  ```
 cd account
-go run account.go
+go run account.go 
 ```
