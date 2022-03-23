@@ -30,7 +30,7 @@ go run client.go
  - pending account balance
  - generate new wallet 
  - generate hdwallet
- - utilizaty to generate mnemonic words
+ - utility to generate mnemonic words
  ```
 cd account
 go run account.go 
