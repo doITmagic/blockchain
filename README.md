@@ -31,6 +31,7 @@ go run client.go
  - generate new wallet 
  - generate hdwallet
  - utility to generate mnemonic words
+ - validate address, check address type (contract or account)
  ```
 cd account
 go run account.go 
