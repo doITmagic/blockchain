@@ -6,6 +6,7 @@ import (
 	"log"
 
 	"github.com/doitmagic/blockchain/account/balance"
+	"github.com/doitmagic/blockchain/account/keystores"
 	"github.com/doitmagic/blockchain/account/wallet"
 	"github.com/doitmagic/blockchain/block"
 	"github.com/ethereum/go-ethereum/common"
@@ -40,7 +41,7 @@ func main() {
 			log.Fatal(err)
 		}
 		//ballance in wei
-		fmt.Printf("balance at the time of that block nr %d is %v ", blockHeader.Number, balanceAt)
+		fmt.Printf("balance at the time of that block nr %d is %v \n", blockHeader.Number, balanceAt)
 	}
 
 	//print balance in ethereum
@@ -57,5 +58,16 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("new wallet adress is %s ", walletAddress)
+	fmt.Printf("new wallet adress is %s \n", walletAddress)
+
+	addr, err := keystores.CreateKeystore("./", "embrace skill away kick hedgehog")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("new wallet adress is %s \n", addr)
+
+	err = wallet.CreateHdWallet()
+	if err != nil {
+		log.Fatal(err)
+	}
 }
